@@ -10,6 +10,6 @@ const router = express.Router();
 
 router.get("/getopeninghours", getOpeningHours);
 router.post("/updatesingledaystatus", updateSingleDayStatus);
-router.put("/updateOpeningHours", updateOpeningHours);
+router.put("/updateopeninghours", updateOpeningHours);
 
 module.exports = router;
