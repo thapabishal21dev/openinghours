@@ -27,7 +27,7 @@ This endpoint retrieves the opening hours for the business.
 
 1. Open Postman.
 2. Set the request type to GET.
-3. Enter the following URL: `http://localhost:3000/getopeninghours`.
+3. Enter the following URL: `http://localhost:5001/getopeninghours`
 4. Click Send.
 5. You should receive a response containing the opening hours for the business.
 
@@ -51,7 +51,7 @@ Testing in Postman:
 
     Open Postman.
     Set the request type to POST.
-    Enter the following URL: http://localhost:3000/updatesingleday.
+    Enter the following URL: http://localhost:5001/updatesingleday
     Set the request body to the JSON mentioned above.
     Click Send.
     You should receive a response confirming the update.
@@ -71,7 +71,7 @@ Testing in Postman:
 
     Open Postman.
     Set the request type to PUT.
-    Enter the following URL: http://localhost:3000/updatealldays.
+    Enter the following URL: http://localhost:5001/updatealldays
     Set the request body to the JSON mentioned above.
     Click Send.
     You should receive a response confirming the update for the next week.
