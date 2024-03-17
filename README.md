@@ -6,7 +6,7 @@ This API provides endpoints to manage and retrieve opening hours for a business.
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/opening-hours-api.git
+git clone https://github.com/thapabishal21dev/openinghours.git
 
 2. Install dependencies:
 
@@ -54,4 +54,7 @@ Testing in Postman:
     Set the request body to the JSON mentioned above.
     Click Send.
     You should receive a response confirming the update.
+
+
+### 3. POST /updatesingledaystatus
 
