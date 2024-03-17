@@ -2,14 +2,14 @@ const express = require("express");
 const fs = require("fs");
 const {
   getOpeningHours,
-  updateSingleDayStatus,
-  updateOpeningHours,
+  updateSingleDay,
+  updateAllDays,
 } = require("../controllers/openingHours");
 
 const router = express.Router();
 
 router.get("/getopeninghours", getOpeningHours);
-router.post("/updatesingledaystatus", updateSingleDayStatus);
-router.put("/updateopeninghours", updateOpeningHours);
+router.post("/updatesingleday", updateSingleDay);
+router.put("/updatealldays", updateAllDays);
 
 module.exports = router;

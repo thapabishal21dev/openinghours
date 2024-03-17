@@ -16,7 +16,7 @@ async function getOpeningHours(req, res) {
   }
 }
 
-async function updateSingleDayStatus(req, res) {
+async function updateSingleDay(req, res) {
   try {
     const { day, date, status, open, close } = req.body;
 
@@ -49,22 +49,22 @@ async function updateSingleDayStatus(req, res) {
   }
 }
 
-async function updateOpeningHours(req, res) {
+async function updateAllDays(req, res) {
   try {
     const dataToUpdate = req.body;
 
-    const { _id, name ,opening_times } = dataToUpdate;
+    const { name, opening_times } = dataToUpdate;
 
     const result = await UserModel.findOneAndUpdate(
-      { _id },
-      { $set: { name, opening_times } }, 
+      { name },
+      { opening_times },
       { new: true }
     );
 
     if (!result) {
       return res
         .status(404)
-        .json({ message: `Document not found with id: ${_id}` });
+        .json({ message: `Document not found with name: ${name}` });
     }
 
     res.json({
@@ -79,6 +79,6 @@ async function updateOpeningHours(req, res) {
 
 module.exports = {
   getOpeningHours,
-  updateSingleDayStatus,
-  updateOpeningHours,
+  updateSingleDay,
+  updateAllDays,
 };
