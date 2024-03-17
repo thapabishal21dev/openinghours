@@ -53,11 +53,11 @@ async function updateOpeningHours(req, res) {
   try {
     const dataToUpdate = req.body;
 
-    const { _id, opening_times } = dataToUpdate;
+    const { _id, name ,opening_times } = dataToUpdate;
 
     const result = await UserModel.findOneAndUpdate(
       { _id },
-      { $set: { opening_times } },
+      { $set: { name, opening_times } }, 
       { new: true }
     );
 
